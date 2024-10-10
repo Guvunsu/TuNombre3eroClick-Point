@@ -1,0 +1,964 @@
+fileFormatVersion: 2
+guid: 793b75d9642849a49bb81526f7617b7e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: office stuffs 8x8_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 660
+        width: 120
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c997551ebf8f5748be16029264447ab
+      internalID: 1952241985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 660
+        width: 120
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e36b0f4d8f655c488dddd5d8b76c56d
+      internalID: 113237512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 660
+        width: 120
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a607ab3f0e0484aad079bffeb1612e
+      internalID: 684598644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_3
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 660
+        width: 120
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0671242dd8988418725398bcfcb59c
+      internalID: -1404956660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_4
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 660
+        width: 120
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aef2a2eda328244db8bc97fbfdceeeb
+      internalID: 2121306620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_5
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 660
+        width: 120
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0258651d9a8879e4a9fb777ce5ab5bdd
+      internalID: -1220274563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_6
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 640
+        width: 220
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d98dde00bf0a6242ae1d11b7bf55656
+      internalID: -430555339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_7
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 640
+        width: 220
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e83a6be015d6d40a43d6c99086f59d
+      internalID: -167354049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_8
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 640
+        width: 220
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765b35c59eee9e94f889cc5f488cda99
+      internalID: -2050240411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_9
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 640
+        width: 220
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcd98c8eeaffd54faa4e988e064dc33
+      internalID: -400147636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_10
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 557
+        width: 159
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6317982512a71724182dec3f753b2905
+      internalID: -791990595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 560
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6103dddd9bf8404ba53c866baf73e3b
+      internalID: -1384908728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_12
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 560
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425917ad8c06e0f4a9eca6fe74fe65cc
+      internalID: 509425977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_13
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 560
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7657550ca77304a8efc2b95bb9bad7
+      internalID: -747828535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_14
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 560
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82a11a64223712448e2357cdfb2a1f2
+      internalID: 35978321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_15
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 560
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cc5f509c036824f9b1fc9481a976e9
+      internalID: 475150574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_16
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 560
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0113f68b22cab9749893da20d7e38bd6
+      internalID: 1300951322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_17
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 560
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ddc56bc26702345a6532672ae27255
+      internalID: -1184094655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_18
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 480
+        width: 60
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd328ed77aec7f42818975dad952fec
+      internalID: -199860000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_19
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 480
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caa32d87c1dd2240ac80b0b3a1b36fb
+      internalID: 1555939481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_20
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 480
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818780e65ea5b3a46a9b10f93a88120a
+      internalID: 127807664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_21
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 480
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7cd3006a8bbbc458dbcce4f05c540b
+      internalID: -2140466573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_22
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 480
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9ef4b1361e83140b422f69ca8e2205
+      internalID: -2100286254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_23
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 480
+        width: 40
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306a5aab3db5afe4ebbb8dca2b9a9233
+      internalID: 1102105376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_24
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 480
+        width: 40
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86c8c8268d78824c870d622adc63a89
+      internalID: -1905715198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_25
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 480
+        width: 40
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad0a43fe85febc4a87aa7fc5c3b4ea4
+      internalID: 80069730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_26
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 480
+        width: 40
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccb00dab12447a489b564b75d5a03be
+      internalID: 1296720416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_27
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 400
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc389668d11b17247b09581bc23295d0
+      internalID: -107999531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_28
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 400
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67297317ba65a64a87ae0c406b34154
+      internalID: -1695841025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_29
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 400
+        width: 60
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ae765019fb77c448e9f26aa871ff89
+      internalID: -2010046180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_30
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 400
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e140dfc608b244942bdb5f22a6f7dff3
+      internalID: 1112593062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_31
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 400
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25723c97121639a42919c949d5b8bcc0
+      internalID: -1327338716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_32
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 160
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1317331a05d92574ab0f0feab6b5c2f1
+      internalID: 1498929852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_34
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 80
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e54f16c2bdc504f996b5d1e87bc5ae
+      internalID: 1489121760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_35
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 80
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a6b18eba5d6324182bf428d27e58a6
+      internalID: -987387917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_36
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8778c1bbd997aee4f83308148ab27af6
+      internalID: -232796194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_37
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 0
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8639a83fbdefb134289a7663c18e1d23
+      internalID: 1298195821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office stuffs 8x8_33
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 0
+        width: 404
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed777bfe8304c4243be3d85869ebc5f5
+      internalID: -906178361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      office stuffs 8x8_0: 1952241985
+      office stuffs 8x8_1: 113237512
+      office stuffs 8x8_10: -791990595
+      office stuffs 8x8_11: -1384908728
+      office stuffs 8x8_12: 509425977
+      office stuffs 8x8_13: -747828535
+      office stuffs 8x8_14: 35978321
+      office stuffs 8x8_15: 475150574
+      office stuffs 8x8_16: 1300951322
+      office stuffs 8x8_17: -1184094655
+      office stuffs 8x8_18: -199860000
+      office stuffs 8x8_19: 1555939481
+      office stuffs 8x8_2: 684598644
+      office stuffs 8x8_20: 127807664
+      office stuffs 8x8_21: -2140466573
+      office stuffs 8x8_22: -2100286254
+      office stuffs 8x8_23: 1102105376
+      office stuffs 8x8_24: -1905715198
+      office stuffs 8x8_25: 80069730
+      office stuffs 8x8_26: 1296720416
+      office stuffs 8x8_27: -107999531
+      office stuffs 8x8_28: -1695841025
+      office stuffs 8x8_29: -2010046180
+      office stuffs 8x8_3: -1404956660
+      office stuffs 8x8_30: 1112593062
+      office stuffs 8x8_31: -1327338716
+      office stuffs 8x8_32: 1498929852
+      office stuffs 8x8_33: -906178361
+      office stuffs 8x8_34: 1489121760
+      office stuffs 8x8_35: -987387917
+      office stuffs 8x8_36: -232796194
+      office stuffs 8x8_37: 1298195821
+      office stuffs 8x8_38: 841697030
+      office stuffs 8x8_4: 2121306620
+      office stuffs 8x8_5: -1220274563
+      office stuffs 8x8_6: -430555339
+      office stuffs 8x8_7: -167354049
+      office stuffs 8x8_8: -2050240411
+      office stuffs 8x8_9: -400147636
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
