@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 3993843190935467725, guid: c0c564b7cbae25544be2348951848d4f, type: 3}
+      propertyPath: m_Name
+      value: Flecha Der
+      objectReference: {fileID: 0}
     - target: {fileID: 8664278345934866308, guid: c0c564b7cbae25544be2348951848d4f, type: 3}
       propertyPath: m_Name
-      value: FlechaIZQ Variant
+      value: FlechaDERE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
