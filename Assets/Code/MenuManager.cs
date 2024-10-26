@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using Unity.VisualScripting.FullSerializer.Internal.Converters;
 
 public class MenuManager : MonoBehaviour {
+
     #region Variables
 
     public GameObject misionSelect, shopMenu, exitGO;
@@ -13,20 +14,18 @@ public class MenuManager : MonoBehaviour {
 
     #endregion Variables
 
-    #region Funciones Publicas 
     // Métodos para cambiar entre escenas
+    #region Funciones Publicas 
+
     public void LoadMenuPrincipal() {
         SceneManager.LoadScene("Menu");
     }
-
     public void LoadSeleccionMisiones() {
         SceneManager.LoadScene("MisionSelect");
     }
-
     public void LoadTienda() {
         SceneManager.LoadScene("Tienda");
     }
-
     public void LoadGameplay() {
         SceneManager.LoadScene("Gameplay");
     }
