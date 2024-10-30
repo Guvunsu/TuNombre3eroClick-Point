@@ -1781,7 +1781,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300462261}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177457371}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: RetryGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300462261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5573,7 +5585,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 810128055}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177457371}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: GoToExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &810128055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5629,7 +5653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &814059687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10025,10 +10049,14 @@ MonoBehaviour:
   - {fileID: 525784862}
   - {fileID: 1304864029}
   panelTargets:
-  - {fileID: 1969749143}
   - {fileID: 134781155}
+  - {fileID: 1969749143}
   - {fileID: 614945436}
   vCam: {fileID: 1145481549}
+  pausePanel: {fileID: 814059686}
+  menuSceneName: Menu
+  tiendaSceneName: Tienda
+  missionSelectSceneName: MisionSelect
 --- !u!4 &1177457372
 Transform:
   m_ObjectHideFlags: 0
@@ -10478,7 +10506,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1199974141}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177457371}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: GoToExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1199974141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11079,12 +11119,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1846538260}
   - {fileID: 825355144}
   - {fileID: 525784863}
   - {fileID: 1304864030}
   - {fileID: 814059687}
   - {fileID: 1008872897}
+  - {fileID: 1846538260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11370,7 +11410,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1294048701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177457371}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: GoToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1294048701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11740,7 +11792,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1323662913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177457371}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: GoToMissionSelector
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1323662913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13170,7 +13234,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1500146630}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177457371}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: GoToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1500146630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16569,7 +16645,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1942707467}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177457371}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: GoToStore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1942707467
 MonoBehaviour:
   m_ObjectHideFlags: 0

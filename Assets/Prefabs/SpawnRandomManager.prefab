@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7889296611080355382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393274181540570328}
+  - component: {fileID: 6374383028704288798}
+  m_Layer: 0
+  m_Name: SpawnRandomManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393274181540570328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7889296611080355382}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6374383028704288798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7889296611080355382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232f95f92a4e1a04f9113acc484d5a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnableObjects:
+  - {fileID: 7199047625620187525, guid: 8430b1129857f2b43ad78271b743787d, type: 3}
+  - {fileID: 507594193634141955, guid: cce7d2d209f4ab8498e4512ad850e891, type: 3}
+  - {fileID: 8907555648469190651, guid: 816dc6c67976b3c4b93e1ffbb06e4814, type: 3}
+  - {fileID: 1195047771713311184, guid: 07f98460ce4dab54fba71eb07c14e9d3, type: 3}
+  - {fileID: 3481066340116950, guid: 47f1df914b320704db70468daabc41b7, type: 3}
+  - {fileID: 6617537933109795104, guid: 773e49293f4d97b4b8d34bac7e92c781, type: 3}
+  - {fileID: 1862897235076942581, guid: ae22ed6982eb7d54fbaf3a83e2955701, type: 3}
+  - {fileID: 1988000679393352891, guid: a78f708c3e088484f8b0053239301239, type: 3}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnProbability: 1
+  idleDuration: 3
+  walkDuration: 15
+  retryInterval: 20
+  deathDelay: 3
