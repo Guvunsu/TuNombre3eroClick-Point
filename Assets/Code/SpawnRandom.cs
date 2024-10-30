@@ -86,7 +86,7 @@ public class SpawnRandom : MonoBehaviour {
 
     #endregion Funciones Privadas
 
-    // Clase interna para manejar el clic y la animación de muerte
+    // Clase interna para manejar el clic para la animación de muerte
     private class Clickable : MonoBehaviour {
         private Animator animator;
         private float deathDelay;
