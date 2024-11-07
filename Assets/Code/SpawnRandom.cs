@@ -17,15 +17,16 @@ public class SpawnRandom : MonoBehaviour
     GameObject spawnedObject;          // Referencia al objeto generado actualmente
     Animator animator;                 // Referencia al Animator del objeto generado
     public Clickeable clickeableScript;
-    #endregion Variables
-
     // Esta variable será usada por otro script para saber cuántos bichos han sido destruidos
     public int bichosDestruidos = 0;
 
+    #endregion Variables
+
+
     #region Funciones Públicas
-   public  void Start()
+    public void Start()
     {
-       // Instantiate(prefab, transform.position, Quaternion.identity);
+        // Instantiate(prefab, transform.position, Quaternion.identity);
     }
     public void OnButtonClick()
     {

@@ -25,6 +25,14 @@ public class PanelManager : MonoBehaviour
 
         // Inicializa el tiempo restante con el tiempo límite
         tiempoRestante = tiempoLimite;
+
+        //Ganar EStrellas
+
+        // Inicializamos el tiempo restante con el tiempo que empieza el nivel
+        tiempoRestante = tiempoMinimo;
+        estrellas = 0;  // Inicializamos las estrellas en 0
+        resultado = "Tiempo mínimo no alcanzado";
+        ResetearContadorBichos();
     }
 
     void Update()
@@ -35,20 +43,21 @@ public class PanelManager : MonoBehaviour
             if (paused)
             {
                 ResumeGame();
+                ReanudarTimer();
             }
             else
             {
                 PauseGame();
                 PausarTimer();
             }
-           
+
         }
 
         //// Verificamos si el nivel ha sido completado para mostrar el panel de victoria
-        //if (NivelCompletado())
-        //{
-        //    MostrarPanelVictoria();
-        //}
+        if (NivelCompletado())
+        {
+            MostrarPanelVictoria();
+        }
 
         // Si el timer está activo y no está pausado
         if (timerActivo && !isPaused)
@@ -67,6 +76,35 @@ public class PanelManager : MonoBehaviour
             // Actualizamos el texto del timer en el UI
             ActualizarTextoTimer();
         }
+
+
+        // GanarEstrellas
+
+        // Si el tiempo restante es mayor a 0, reducimos el tiempo
+        if (tiempoRestante > 0)
+        {
+            tiempoRestante -= Time.deltaTime;
+        }
+        else
+        {
+            // Si pasamos el tiempo mínimo, asignamos una estrella
+            if (tiempoRestante <= 0 && estrellas == 0)
+            {
+                // Aquí verificamos si se pasó el tiempo mínimo y se puede ganar la estrella
+                if (tiempoRestante > -1)  // Si terminó dentro del tiempo
+                {
+                    estrellas = 1;
+                    resultado = "¡Ganaste 1 estrella!";
+                }
+                else
+                {
+                    resultado = "Tiempo mínimo no alcanzado";
+                }
+            }
+        }
+
+        // Actualizamos el texto de las estrellas
+        textoEstrellas.text = "Estrellas: " + estrellas;
     }
     #endregion Funciones Start y Update
 
@@ -180,24 +218,34 @@ public class PanelManager : MonoBehaviour
 
     #endregion Funciones para el panel de pausa
 
-    #region Variables para el Panel de Victoria
+    #region Variables para el Panel de Victoria y obtener estrellas
 
-    GanarEstrellas ganarEstrellasScript;
     SpawnRandom spawnRandomScript;
 
     public GameObject panelVictoria;
     public TextMeshProUGUI textoEstrellas;
     private int totalEstrellas;
 
-    #endregion Variables para el Panel de Victoria
 
-    #region Funciones Panel Victoria
-    // Método que se llama cuando el nivel ha sido completado
-    //public bool NivelCompletado()
-    //{
-    //    // Verificamos si el jugador cumplió ambas condiciones: tiempo y destrucción de bichos
-    //    return ganarEstrellasScript.estrellas > 0 || spawnRandomScript.bichosDestruidos == 8;
-    //}
+    public float tiempoMinimo;  // Tiempo mínimo para obtener una estrella (en segundos)
+    public string resultado;  // Para mostrar el mensaje de ganaste o no la estrella
+
+    public int estrellas;
+
+    private int bichosDestruidos = 0;  // Contador de los enemigos destruidos
+    private int totalBichos = 8;  // Número total de enemigos a destruir para ganar una estrella
+
+
+    #endregion Variables para el Panel de Victoria y obtener estrellas
+
+    #region Funciones Panel Victoria y obtener estrellas
+    //Método que se llama cuando el nivel ha sido completado
+    public bool NivelCompletado()
+    {
+        // si umplimos ambas condiciones de tiempo y destrucción de bichos se activa panel de victoria
+        MostrarPanelVictoria();
+        return estrellas > 0 || spawnRandomScript.bichosDestruidos == 8;
+    }
 
     // Mostrar el panel de victoria y las estrellas obtenidas
     public void MostrarPanelVictoria()
@@ -208,8 +256,8 @@ public class PanelManager : MonoBehaviour
         // Reseteamos las estrellas
         totalEstrellas = 0;
 
-        // Verificamos las estrellas por tiempo (de GanarEstrellas)
-        if (ganarEstrellasScript.estrellas > 0)
+        // Verificamos el tiempo y ganas estrellas 
+        if (estrellas > 0)
         {
             totalEstrellas++;
         }
@@ -222,8 +270,6 @@ public class PanelManager : MonoBehaviour
 
         // Actualizamos el texto de estrellas
         textoEstrellas.text = "¡Has ganado " + totalEstrellas + " estrella(s)!";
-
-        // Aquí podrías agregar más lógica, como animaciones o sonidos de victoria
     }
 
     // Método para cerrar el panel de victoria y reiniciar el estado del juego
@@ -233,12 +279,44 @@ public class PanelManager : MonoBehaviour
         panelVictoria.SetActive(false);
 
         // Reseteamos los valores de las estrellas y bichos destruidos
-        ganarEstrellasScript.ResetearEstrellas();
+        ResetearEstrellas();
         spawnRandomScript.bichosDestruidos = 0;  // Reseteamos los bichos destruidos
     }
-    #endregion Funciones Panel Victoria
+    public void ResetearEstrellas()
+    {
+        // Reseteamos el valor de las estrellas y el tiempo cuando el jugador reinicia o vuelve a intentar el nivel
+        estrellas = 0;
+        tiempoRestante = tiempoMinimo;
+        resultado = "Tiempo mínimo no alcanzado";
+        textoEstrellas.text = "Estrellas: " + estrellas;
+    }
+    public void BichoDestruido(string bichoID)
+    {
+        // Incrementamos el contador de bichos destruidos cuando el bicho se destruye
+        // Cada enemigo debe tener un identificador único o tag, en este caso se asume que los enemigos 
+        // tienen un string o ID único que pasa a través del parámetro
+        if (bichosDestruidos < totalBichos)
+        {
+            bichosDestruidos++;
+            Debug.Log($"Bicho destruido: {bichoID}. Total destruidos: {bichosDestruidos}");
 
-    #region Variables Panel de tiempo TMP
+            // Si el jugador ha destruido todos los bichos ganas 1 estrella
+            if (bichosDestruidos == totalBichos)
+            {
+                estrellas++;
+                Debug.Log("¡Ganaste 1 estrella por destruir a todos los bichos!");
+            }
+        }
+    }
+    public void ResetearContadorBichos()
+    {
+        // Reseteamos el contador a 0 cuando se reinicia el juego o se reinicia el nivel
+        bichosDestruidos = 0;
+    }
+
+    #endregion Funciones Panel Victoria y obtener estrellas
+
+    #region Variables Texto de tiempo 
 
     [Header("Timer Settings")]
     public float tiempoLimite;
@@ -250,9 +328,9 @@ public class PanelManager : MonoBehaviour
     private bool timerActivo = true;  // Controla si el timer está activo o no
     private bool isPaused = false;   // Controla si el timer está en pausa
 
-    #endregion Variables Panel de tiempo TMP
+    #endregion Variables Texto de tiempo
 
-    #region Funciones panel de tiempo TMP
+    #region Funciones texto de tiempo 
 
     void ActualizarTextoTimer()
     {
@@ -285,7 +363,8 @@ public class PanelManager : MonoBehaviour
         Time.timeScale = 1f;  // Restaura el tiempo del juego (efecto global de reanudación)
     }
 
-    #endregion Funciones panel de tiempo TMP
+    #endregion Funciones texto de tiempo
+
 
 }
 
