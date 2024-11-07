@@ -34,11 +34,11 @@ public class PanelManager : MonoBehaviour
                 PauseGame();
         }
 
-        // Verificamos si el nivel ha sido completado para mostrar el panel de victoria
-        if (NivelCompletado())
-        {
-            MostrarPanelVictoria();
-        }
+        //// Verificamos si el nivel ha sido completado para mostrar el panel de victoria
+        //if (NivelCompletado())
+        //{
+        //    MostrarPanelVictoria();
+        //}
     }
     #endregion Funciones Start y Update
 
@@ -165,11 +165,11 @@ public class PanelManager : MonoBehaviour
 
     #region Funciones Panel Victoria
     // Método que se llama cuando el nivel ha sido completado
-    public bool NivelCompletado()
-    {
-        // Verificamos si el jugador cumplió ambas condiciones: tiempo y destrucción de bichos
-        return ganarEstrellasScript.estrellas > 0 || spawnRandomScript.bichosDestruidos == 8;
-    }
+    //public bool NivelCompletado()
+    //{
+    //    // Verificamos si el jugador cumplió ambas condiciones: tiempo y destrucción de bichos
+    //    return ganarEstrellasScript.estrellas > 0 || spawnRandomScript.bichosDestruidos == 8;
+    //}
 
     // Mostrar el panel de victoria y las estrellas obtenidas
     public void MostrarPanelVictoria()
