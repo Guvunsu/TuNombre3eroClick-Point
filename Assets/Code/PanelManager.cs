@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro; // Para el TextMeshProUGUI
 using Cinemachine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PanelManager : MonoBehaviour
 {
@@ -21,17 +22,30 @@ public class PanelManager : MonoBehaviour
         // Inicializamos los paneles (asegurándonos que el panel de victoria está desactivado)
         panelVictoria.SetActive(false);
         pausePanel.SetActive(false);  // Inicialmente el panel de pausa está oculto
+
+        // Inicializa el tiempo restante con el tiempo límite
+        tiempoRestante = tiempoLimite;
     }
 
     void Update()
     {
         // Activar o desactivar el menú de pausa cuando el jugador presiona "P"
-        if (Input.GetKeyDown(KeyCode.P))
+        if (input.GetKeyDown(Keycode.P))
         {
             if (paused)
+            {
                 ResumeGame();
-            else
+            }
+            else if (paused)
+            {
                 PauseGame();
+                PausarTimer();
+            }
+            else if (!paused)
+            {
+
+                ReanudarTimer();
+            }
         }
 
         //// Verificamos si el nivel ha sido completado para mostrar el panel de victoria
@@ -39,6 +53,24 @@ public class PanelManager : MonoBehaviour
         //{
         //    MostrarPanelVictoria();
         //}
+
+        // Si el timer está activo y no está pausado
+        if (timerActivo && !isPaused)
+        {
+            // Decrementamos el tiempo usando unscaledDeltaTime para que no se vea afectado por la pausa
+            tiempoRestante -= Time.unscaledDeltaTime;
+
+            // Si el tiempo llega a 0, detenemos el timer
+            if (tiempoRestante <= 0f)
+            {
+                tiempoRestante = 0f;
+                timerActivo = false;
+                // Aquí podrías activar alguna lógica cuando el timer llegue a 0, como finalizar el nivel
+            }
+
+            // Actualizamos el texto del timer en el UI
+            ActualizarTextoTimer();
+        }
     }
     #endregion Funciones Start y Update
 
@@ -209,6 +241,56 @@ public class PanelManager : MonoBehaviour
         spawnRandomScript.bichosDestruidos = 0;  // Reseteamos los bichos destruidos
     }
     #endregion Funciones Panel Victoria
+
+    #region Variables Panel de tiempo TMP
+
+    [Header("Timer Settings")]
+    public float tiempoLimite;
+
+    [Header("UI References")]
+    public TextMeshProUGUI textoTimer;  // Referencia al TextMeshProUGUI para mostrar el tiempo
+
+    private float tiempoRestante;  // Tiempo restante en segundos
+    private bool timerActivo = true;  // Controla si el timer está activo o no
+    private bool isPaused = false;   // Controla si el timer está en pausa
+
+    #endregion Variables Panel de tiempo TMP
+
+
+    #region Funciones panel de tiempo TMP
+
+    void ActualizarTextoTimer()
+    {
+        float minutos = Mathf.FloorToInt(tiempoRestante / 60);
+        float segundos = Mathf.FloorToInt(tiempoRestante % 60);
+        textoTimer.text = string.Format("{0:00}:{1:00}", minutos, segundos);
+    }
+    public void DetenerTimer()
+    {
+        timerActivo = false;
+    }
+    public void ReiniciarTimer()
+    {
+        tiempoRestante = tiempoLimite;
+        timerActivo = true;
+    }
+    public void CambiarTiempoLimite(float nuevoTiempo)
+    {
+        tiempoLimite = nuevoTiempo;
+        ReiniciarTimer();  // Reinicia el timer con el nuevo tiempo límite
+    }
+    public void PausarTimer()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;  // Detiene el tiempo del juego (efecto global de pausa)
+    }
+    public void ReanudarTimer()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;  // Restaura el tiempo del juego (efecto global de reanudación)
+    }
+
+    #endregion Funciones panel de tiempo TMP
 
 }
 
