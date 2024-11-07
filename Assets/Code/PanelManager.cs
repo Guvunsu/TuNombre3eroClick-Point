@@ -30,22 +30,18 @@ public class PanelManager : MonoBehaviour
     void Update()
     {
         // Activar o desactivar el menú de pausa cuando el jugador presiona "P"
-        if (input.GetKeyDown(Keycode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (paused)
             {
                 ResumeGame();
             }
-            else if (paused)
+            else
             {
                 PauseGame();
                 PausarTimer();
             }
-            else if (!paused)
-            {
-
-                ReanudarTimer();
-            }
+           
         }
 
         //// Verificamos si el nivel ha sido completado para mostrar el panel de victoria
@@ -255,7 +251,6 @@ public class PanelManager : MonoBehaviour
     private bool isPaused = false;   // Controla si el timer está en pausa
 
     #endregion Variables Panel de tiempo TMP
-
 
     #region Funciones panel de tiempo TMP
 

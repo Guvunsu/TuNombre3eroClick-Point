@@ -13,7 +13,7 @@ public class SpawnRandom : MonoBehaviour
     [SerializeField] float walkDuration = 3.0f;          // Duración en segundos en estado de caminar
     [SerializeField] float retryInterval = 5.0f;         // Tiempo de espera para reintentar aparición si no salió nada
     [SerializeField] float deathDelay = 2.0f;            // Tiempo de espera antes de iniciar la animación de muerte después de hacer clic
-
+    //[SerializeField] GameObject prefab;
     GameObject spawnedObject;          // Referencia al objeto generado actualmente
     Animator animator;                 // Referencia al Animator del objeto generado
     public Clickeable clickeableScript;
@@ -23,6 +23,10 @@ public class SpawnRandom : MonoBehaviour
     public int bichosDestruidos = 0;
 
     #region Funciones Públicas
+   public  void Start()
+    {
+       // Instantiate(prefab, transform.position, Quaternion.identity);
+    }
     public void OnButtonClick()
     {
         TrySpawnObject();

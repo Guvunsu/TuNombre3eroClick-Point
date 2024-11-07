@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 2952048564469748331}
   - component: {fileID: 6776366542032631539}
   - component: {fileID: 4675340193410666060}
-  - component: {fileID: 3338724850231677367}
   - component: {fileID: 4905720507860056692}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: bicho (3)
   m_TagString: Bichos
   m_Icon: {fileID: 0}
@@ -122,21 +121,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!111 &3338724850231677367
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8907555648469190651}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &4905720507860056692
 Animator:
   serializedVersion: 5

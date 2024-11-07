@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Clickeable : MonoBehaviour
 {
-    private Animator animator;
+   public Animator animator;
     private float deathDelay;
 
     public void Initialize(Animator animator, float delay)

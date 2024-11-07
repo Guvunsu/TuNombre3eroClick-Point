@@ -1778,8 +1778,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 702199257
-  m_SortingOrder: 5
+  m_SortingLayerID: -1062572467
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &288219402
 RectTransform:
@@ -1793,8 +1793,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 814059687}
   - {fileID: 590410670}
+  - {fileID: 814059687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6121,14 +6121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnableObjects:
-  - {fileID: 7199047625620187525, guid: 8430b1129857f2b43ad78271b743787d, type: 3}
   - {fileID: 507594193634141955, guid: cce7d2d209f4ab8498e4512ad850e891, type: 3}
-  - {fileID: 8907555648469190651, guid: 816dc6c67976b3c4b93e1ffbb06e4814, type: 3}
-  - {fileID: 1195047771713311184, guid: 07f98460ce4dab54fba71eb07c14e9d3, type: 3}
-  - {fileID: 3481066340116950, guid: 47f1df914b320704db70468daabc41b7, type: 3}
-  - {fileID: 6617537933109795104, guid: 773e49293f4d97b4b8d34bac7e92c781, type: 3}
-  - {fileID: 1862897235076942581, guid: ae22ed6982eb7d54fbaf3a83e2955701, type: 3}
-  - {fileID: 1988000679393352891, guid: a78f708c3e088484f8b0053239301239, type: 3}
   spawnPoints:
   - {fileID: 1143352362}
   - {fileID: 1019615851}
@@ -11322,7 +11315,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 14080}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
