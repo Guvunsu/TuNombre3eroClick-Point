@@ -9288,7 +9288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 231.33362, y: -7.5165405}
+  m_AnchoredPosition: {x: 231.3335, y: -7.5166016}
   m_SizeDelta: {x: 0.00012207031, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1008872898
@@ -11519,10 +11519,10 @@ MonoBehaviour:
   missionSelectSceneName: MisionSelect
   panelVictoria: {fileID: 1008872896}
   textoEstrellas: {fileID: 772703775}
-  tiempoMinimo: 0
+  tiempoMinimo: 303
   resultado: 
   estrellas: 0
-  tiempoLimite: 303
+  tiempoLimite: 0
   textoTimer: {fileID: 590410671}
 --- !u!4 &1177457372
 Transform:
