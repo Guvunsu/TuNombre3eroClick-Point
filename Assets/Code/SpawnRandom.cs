@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnRandom : MonoBehaviour
-{
+public class SpawnRandom : MonoBehaviour {
     #region Variables
     [SerializeField] GameObject[] spawnableObjects;      // Array de prefabs para elegir aleatoriamente
     [SerializeField] Transform[] spawnPoints;            // Array de puntos de aparición
@@ -22,23 +21,15 @@ public class SpawnRandom : MonoBehaviour
 
     #endregion Variables
 
-
     #region Funciones Públicas
-    public void Start()
-    {
+    public void Start() {
         // Instantiate(prefab, transform.position, Quaternion.identity);
     }
-    public void OnButtonClick()
-    {
+    public void OnButtonClick() {
         TrySpawnObject();
     }
-    #endregion Funciones Públicas
-
-    #region Funciones Privadas
-    void TrySpawnObject()
-    {
-        if (Random.value < spawnProbability)
-        {
+    public void TrySpawnObject() {
+        if (Random.value < spawnProbability) {
             int randomObjectIndex = Random.Range(0, spawnableObjects.Length);
             GameObject objectToSpawn = spawnableObjects[randomObjectIndex];
 
@@ -49,32 +40,30 @@ public class SpawnRandom : MonoBehaviour
             animator = spawnedObject.GetComponent<Animator>();
 
             StartCoroutine(HandleObjectBehavior(spawnedObject));
-        }
-        else
-        {
+        } else {
             StartCoroutine(RetrySpawnAfterDelay());
         }
     }
 
-    IEnumerator HandleObjectBehavior(GameObject obj)
-    {
+    #endregion Funciones Públicas
+
+    #region Funciones Privadas
+
+    IEnumerator HandleObjectBehavior(GameObject obj) {
         yield return new WaitForSeconds(idleDuration);
-        if (animator != null)
-        {
+        if (animator != null) {
             animator.SetBool("isWalking", true);
         }
 
         yield return new WaitForSeconds(walkDuration);
-        if (animator != null)
-        {
+        if (animator != null) {
             animator.SetBool("isWalking", false);
         }
 
         obj.AddComponent<Clickeable>().Initialize(animator, deathDelay);
     }
 
-    IEnumerator RetrySpawnAfterDelay()
-    {
+    IEnumerator RetrySpawnAfterDelay() {
         yield return new WaitForSeconds(retryInterval);
         TrySpawnObject();
     }

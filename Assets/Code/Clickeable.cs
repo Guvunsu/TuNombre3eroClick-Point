@@ -2,24 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clickeable : MonoBehaviour
-{
-   public Animator animator;
-    private float deathDelay;
+public class Clickeable : MonoBehaviour {
+    public Animator animator;
+    public float deathDelay;
 
-    public void Initialize(Animator animator, float delay)
-    {
+    public void Initialize(Animator animator, float delay) {
         this.animator = animator;
         this.deathDelay = delay;
     }
 
-    private void OnMouseDown()
-    {
+    public void OnMouseDown() {
+        print("funciono");
         StartCoroutine(PlayDeathAnimation());
     }
 
-    private IEnumerator PlayDeathAnimation()
-    {
+    public IEnumerator PlayDeathAnimation() {
         yield return new WaitForSeconds(deathDelay);
         animator.SetTrigger("Death");
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
@@ -27,8 +24,7 @@ public class Clickeable : MonoBehaviour
 
         // Aquí incrementamos el contador de bichos destruidos en el SpawnRandom
         SpawnRandom spawnRandom = FindObjectOfType<SpawnRandom>();
-        if (spawnRandom != null)
-        {
+        if (spawnRandom != null) {
             spawnRandom.bichosDestruidos++;  // Incrementar el contador de bichos destruidos
         }
     }
