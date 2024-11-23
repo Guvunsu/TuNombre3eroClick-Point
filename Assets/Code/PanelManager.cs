@@ -7,29 +7,27 @@ using static UnityEngine.Rendering.DebugUI;
 public class PanelManager : MonoBehaviour {
     #region Variables generales
 
-    private bool paused = false;  // Para saber si el juego está en pausa
-
-    #endregion Variables generales
-
-    #region Variables para los paneles del gameplay
+    #region Variables paneles del gameplay
 
     public GameObject[] panels;             // Tus paneles de gameplay
     public Transform[] panelTargets;        // Los puntos de enfoque para Cinemachine en cada panel
     public CinemachineVirtualCamera vCam;   // Cámara virtual de Cinemachine
     private int setIndex = 0;               // Índice actual del panel activo
     public GameObject pausePanel;           // Panel de pausa que se activará y desactivará
+    public int defaultPanelIndex = 0;       // esta variable la uso para despues de dejar el pausa panel y este en el indice 0
 
-    #endregion Variables para los paneles del gameplay
+    #endregion Variables paneles del gameplay
 
-    #region Variables para el pausa panel
+    #region Variables pausa panel
 
+    private bool paused = false;  // Para saber si el juego está en pausa
     public string menuSceneName = "Menu";
     public string tiendaSceneName = "Tienda";
     public string missionSelectSceneName = "MisionSelect";
 
-    #endregion Variables para el pausa panel
+    #endregion Variables pausa panel
 
-    #region Variables para el Panel de Victoria y obtener estrellas
+    #region Variables Panel de Victoria/obtener estrellas
 
     SpawnRandom spawnRandomScript;
 
@@ -47,9 +45,9 @@ public class PanelManager : MonoBehaviour {
     private int totalBichos = 8;  // Número total de enemigos a destruir para ganar una estrella
 
 
-    #endregion Variables para el Panel de Victoria y obtener estrellas
+    #endregion Variables Panel de Victoria/obtener estrellas
 
-    #region Variables Texto de tiempo 
+    #region Variables tiempo 
 
     [Header("Timer Settings")]
     public float tiempoLimite;
@@ -61,7 +59,9 @@ public class PanelManager : MonoBehaviour {
     private bool timerActivo = true;  // Controla si el timer está activo o no
     private bool isPaused = false;   // Controla si el timer está en pausa
 
-    #endregion Variables Texto de tiempo
+    #endregion Variables tiempo
+
+    #endregion Variables generales
 
     #region Funciones Start y Update
 
@@ -184,6 +184,13 @@ public class PanelManager : MonoBehaviour {
         foreach (GameObject panel in panels) {
             panel.SetActive(false);
         }
+        //while (paused) {
+
+        //    pausePanel.SetActive(false);
+
+        //    panels[panels.Length - 1].SetActive(false);
+        //}
+
     }
 
     // Desactiva el menú de pausa
@@ -192,9 +199,20 @@ public class PanelManager : MonoBehaviour {
         pausePanel.SetActive(false);  // Desactivar el panel de pausa
         Time.timeScale = 1f;          // Reanuda el tiempo del juego
 
-        // Reactiva los paneles de gameplay
-        foreach (GameObject panel in panels) {
-            panel.SetActive(true);
+        //// Reactiva los paneles de gameplay
+        //foreach (GameObject panel in panels) {
+        //    // agrego esto para ver si funciona que se quede en el panel donde se quedo en pausa y se reanuda alli
+        //    //int currentIndex = (int)panel.transform.position.x;
+        //    //if (setIndex == currentIndex) {
+        //    panel.SetActive(true);
+
+        //    //}
+
+        // siempre regresa al panel numero 0
+
+        for (int i = 0; i < panels.Length; i++) {
+
+            panels[i].SetActive(i == defaultPanelIndex);
         }
     }
 
