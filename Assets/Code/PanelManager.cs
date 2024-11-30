@@ -33,7 +33,7 @@ public class PanelManager : MonoBehaviour {
 
     public GameObject panelVictoria;
     public TextMeshProUGUI textoEstrellas;
-    private int totalEstrellas;
+    //private int totalEstrellas;
 
 
     public float tiempoMinimo;  // Tiempo mínimo para obtener una estrella (en segundos)
@@ -252,32 +252,37 @@ public class PanelManager : MonoBehaviour {
 
     #region Funciones Panel Victoria y obtener estrellas
     //Método que se llama cuando el nivel ha sido completado
-    public bool NivelCompletado() {
-        // si umplimos ambas condiciones de tiempo y destrucción de bichos se activa panel de victoria
-        MostrarPanelVictoria();
-        return estrellas > 0 || spawnRandomScript.bichosDestruidos == 8;
-    }
+    //public bool NivelCompletado() {
+    //    // si umplimos ambas condiciones de tiempo y destrucción de bichos se activa panel de victoria
+    //    MostrarPanelVictoria();
+    //    return estrellas > 0 || spawnRandomScript.bichosDestruidos == 8;
+    //}
 
     // Mostrar el panel de victoria y las estrellas obtenidas
-    public void MostrarPanelVictoria() {
+ 
+    public void MostrarPanelVictoria(bool esVictoria) {
         // Activamos el panel de victoria
-        panelVictoria.SetActive(true);
+       
 
         // Reseteamos las estrellas
-        totalEstrellas = 0;
+        //totalEstrellas = 0;
 
-        // Verificamos el tiempo y ganas estrellas 
-        if (estrellas > 0) {
-            totalEstrellas++;
-        }
+        // Si el jugador gana
+        if (esVictoria) {
+            if (bichosDestruidos == totalBichos) {
+                panelVictoria.SetActive(true);
+                estrellas++;  // Ganó una estrella por destruir todos los bichos
+            }
 
-        // Verificamos las estrellas por la destrucción de bichos (de SpawnRandom)
-        if (spawnRandomScript.bichosDestruidos == 8) {
-            totalEstrellas++;
+            if (tiempoRestante > 0) {
+                resultado = "¡Ganaste 1 estrella!";
+            }
+        } else {
+            resultado = "Perdiste: tiempo agotado";
         }
 
         // Actualizamos el texto de estrellas
-        textoEstrellas.text = "¡Has ganado " + totalEstrellas + " estrella(s)!";
+        textoEstrellas.text = "¡Has ganado " + estrellas + " estrella(s)!";
     }
 
     // Método para cerrar el panel de victoria y reiniciar el estado del juego
@@ -287,8 +292,9 @@ public class PanelManager : MonoBehaviour {
 
         // Reseteamos los valores de las estrellas y bichos destruidos
         ResetearEstrellas();
-        spawnRandomScript.bichosDestruidos = 0;  // Reseteamos los bichos destruidos
+        ResetearContadorBichos();  // Reseteamos los bichos destruidos
     }
+
     public void ResetearEstrellas() {
         // Reseteamos el valor de las estrellas y el tiempo cuando el jugador reinicia o vuelve a intentar el nivel
         estrellas = 0;
@@ -296,6 +302,7 @@ public class PanelManager : MonoBehaviour {
         resultado = "Tiempo mínimo no alcanzado";
         textoEstrellas.text = "Estrellas: " + estrellas;
     }
+
     public void BichoDestruido(string bichoID) {
         // Incrementamos el contador de bichos destruidos cuando el bicho se destruye
         // Cada enemigo debe tener un identificador único o tag, en este caso se asume que los enemigos 

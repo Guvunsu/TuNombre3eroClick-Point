@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SpawnRandom : MonoBehaviour {
     #region Variables
     [SerializeField] GameObject[] spawnableObjects;      // Array de prefabs para elegir aleatoriamente
@@ -59,8 +59,8 @@ public class SpawnRandom : MonoBehaviour {
         if (animator != null) {
             animator.SetBool("isWalking", false);
         }
-
         obj.AddComponent<Clickeable>().Initialize(animator, deathDelay);
+
     }
 
     IEnumerator RetrySpawnAfterDelay() {
@@ -71,6 +71,3 @@ public class SpawnRandom : MonoBehaviour {
 
 
 }
-
-
-

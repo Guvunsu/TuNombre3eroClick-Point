@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 //public class Clickeable : MonoBehaviour {
 //    public Animator animator;
 //    public float deathDelay;
@@ -31,13 +32,12 @@ using UnityEngine;
 //}
 
 
-using UnityEngine.UI;  // Para acceder al CanvasGroup o Button
-
 public class Clickeable : MonoBehaviour {
     public Animator animator;
     public float deathDelay;
     private bool isDead = false;  // Variable para verificar si el objeto ya está muerto
 
+    [SerializeField] private GameObject[] m_bichos;
     private CanvasGroup canvasGroup; // CanvasGroup para controlar la interactividad
     private Button[] buttons; // Lista de botones que deben seguir siendo interactivos
 
@@ -55,6 +55,7 @@ public class Clickeable : MonoBehaviour {
 
     // Detecta cuando el jugador hace clic sobre el objeto
     public void OnMouseDown() {
+       
         // Solo ejecuta si el objeto no está muerto
         if (!isDead) {
             print("¡Funcionó! El objeto fue clickeado.");
@@ -91,7 +92,5 @@ public class Clickeable : MonoBehaviour {
 
     }
 }
-
-
 
 
