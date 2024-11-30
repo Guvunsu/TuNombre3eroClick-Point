@@ -7,5 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ImagenSofa
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 4ea5effab5f44ab4cb0d6df65bde5cc3, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7cd63834f46c4f946bbceec5146d7175, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7cd63834f46c4f946bbceec5146d7175, type: 2}
