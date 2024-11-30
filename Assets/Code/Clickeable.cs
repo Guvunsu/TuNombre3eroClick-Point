@@ -55,10 +55,10 @@ public class Clickeable : MonoBehaviour {
 
     // Detecta cuando el jugador hace clic sobre el objeto
     public void OnMouseDown() {
-       
+
         // Solo ejecuta si el objeto no está muerto
         if (!isDead) {
-            print("¡Funcionó! El objeto fue clickeado.");
+            print("¡Funcionó! El objeto fue clickeado inicio la animacion de muerte");
             StartCoroutine(PlayDeathAnimation());
         }
     }
@@ -67,19 +67,22 @@ public class Clickeable : MonoBehaviour {
     public IEnumerator PlayDeathAnimation() {
         isDead = true;  // Marcamos que el objeto está "muerto" para no repetir la acción
 
-        // Desactivar la interacción con el objeto (evitar que interfiera con los botones)
-        if (canvasGroup != null) {
-            canvasGroup.blocksRaycasts = false; // Desactiva la interactividad con el objeto
-        }
-
-        // Esperamos el tiempo del retraso antes de activar la animación de muerte
-        yield return new WaitForSeconds(deathDelay);
+        // Desactivar la interacción con el objeto (evitar que interfiera con los botones)}
+        // desactive esto ya que mis bichos no ocuapn botones
+        //if (canvasGroup != null) {
+        //    canvasGroup.blocksRaycasts = false; // Desactiva la interactividad con el objeto
+        //}
 
         // Activamos la animación de muerte
+        print("se actriva mi Trigger de muerte");
         animator.SetTrigger("Death");
 
+        // Esperamos el tiempo del retraso antes de activar la animación de muerte
+        print("me espero tantos segundos para mi delay de muerte");
+        yield return new WaitForSeconds(deathDelay);
+
         // Esperamos que la animación de muerte termine
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(2).length);
 
         // Desactivamos el objeto
         gameObject.SetActive(false);

@@ -11,7 +11,8 @@ public class SpawnRandom : MonoBehaviour {
     [SerializeField] float idleDuration = 2.0f;          // Duración en segundos en estado idle
     [SerializeField] float walkDuration = 3.0f;          // Duración en segundos en estado de caminar
     [SerializeField] float retryInterval = 5.0f;         // Tiempo de espera para reintentar aparición si no salió nada
-    [SerializeField] float deathDelay = 2.0f;            // Tiempo de espera antes de iniciar la animación de muerte después de hacer clic
+    [SerializeField] float deathDelay = 1.0f;            // Tiempo de espera antes de iniciar la animación de muerte después de hacer clic
+   
     //[SerializeField] GameObject prefab;
     GameObject spawnedObject;          // Referencia al objeto generado actualmente
     Animator animator;                 // Referencia al Animator del objeto generado
@@ -24,6 +25,10 @@ public class SpawnRandom : MonoBehaviour {
     #region Funciones Públicas
     public void Start() {
         // Instantiate(prefab, transform.position, Quaternion.identity);
+    }
+    void Update() {
+
+
     }
     public void OnButtonClick() {
         TrySpawnObject();
@@ -50,14 +55,19 @@ public class SpawnRandom : MonoBehaviour {
     #region Funciones Privadas
 
     IEnumerator HandleObjectBehavior(GameObject obj) {
+        print("HandleObjectBehavior inicia");
         yield return new WaitForSeconds(idleDuration);
+        print("HandleObjectBehavior duracion en idle ");
         if (animator != null) {
-            animator.SetBool("isWalking", true);
+            print("HandleObjectBehavior referencia al objeto que tenga el animator este bool");
+            animator.SetBool("IsWalking", false);
         }
 
         yield return new WaitForSeconds(walkDuration);
+        print("HandleObjectBehavior duracion en walk ");
         if (animator != null) {
-            animator.SetBool("isWalking", false);
+            print("HandleObjectBehavior referencia al objeto que tenga el animator este bool");
+            animator.SetBool("IsWalking", true);
         }
         obj.AddComponent<Clickeable>().Initialize(animator, deathDelay);
 
@@ -65,6 +75,7 @@ public class SpawnRandom : MonoBehaviour {
 
     IEnumerator RetrySpawnAfterDelay() {
         yield return new WaitForSeconds(retryInterval);
+        print("IntentELO MAS TARDE JOVEN , RetrySpawnAfterDelay");
         TrySpawnObject();
     }
     #endregion Funciones Privadas
