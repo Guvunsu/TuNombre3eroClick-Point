@@ -27,7 +27,7 @@ public class PanelManager : MonoBehaviour {
 
     #endregion Variables pausa panel
 
-    #region Variables Panel de Victoria/obtener estrellas
+    #region Variables Panel de Victoria
 
     SpawnRandom spawnRandomScript;
 
@@ -45,7 +45,7 @@ public class PanelManager : MonoBehaviour {
     private int totalBichos = 8;  // Número total de enemigos a destruir para ganar una estrella
 
 
-    #endregion Variables Panel de Victoria/obtener estrellas
+    #endregion Variables Panel de Victoria
 
     #region Variables tiempo 
 

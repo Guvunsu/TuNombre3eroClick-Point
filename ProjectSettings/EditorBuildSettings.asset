@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Tienda.unity
-    guid: 46a007a7d1359ce42bd303e17ab6d6ab
-  - enabled: 1
     path: Assets/Scenes/MisionSelect.unity
     guid: 6dd76b931e3e1444c9fe3c1d92ed8849
   - enabled: 1
