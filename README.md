@@ -1,2 +1,2 @@
 # TuNombre3eroClick-Point
-juego super basico para la clase de mecanicas de juego 
+prototipo de juego super basico para la clase de mecanicas de juego 
